@@ -12,7 +12,7 @@ The program will take either a text file or string of words separated by spaces 
 
 ## Pseudocode
 
-Iterate over the dictionary of dictionary and read the documentation for np.choose.random. Look up the syntax on how to set the seed for the functions. Since the numpy function for the choose random requires an array a list was chosen to append the words from the dictionary. A simple math to get the probaility to determine the choose random was also needed and formulated in the list determined by the number of values and variables. 
+Iterate over the dictionary of dictionary and read the documentation for np.choose.random. Look up the syntax on how to set the seed for the functions. Since the numpy function for the choose random requires an array a list was chosen to append the words from the dictionary. A simple math to get the probaility to determine a choose random number was also needed and formulated in the list determined by the number of values and variables. 
 
 ## Reflection 
 
@@ -22,5 +22,7 @@ The difficulty for the project is that how to iterate over the dictionary of dic
 ## Appendix 
 
 Gafurov, A., Brejová, B., & Medvedev, P. (2022). Markov chains improve the significance computation of overlapping genome annotations. Bioinformatics, 38(Supplement_1), i203–i211. https://doi.org/10.1093/bioinformatics/btac255
+
+
 
 
