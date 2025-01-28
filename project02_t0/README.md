@@ -18,7 +18,7 @@ Iterate over the dictionary of dictionary and read the documentation for np.choo
 
 The difficulty for the project is that how to iterate over the dictionary of dictionary in order to pull the next word that was needed. There was possibility of having different n order so the code needed to take account both a string and a tuple. What I thought the final function generate_random_text would have been a straight forward problem via trial and error with accounting for a certain number of loop rather than going through the markov text was chosen. There was also the dilemma for '*S*' and '*E*' computing into the output which doesnt match any of the scentences being formulated. 
 
-narrative that describes what went right, what went wrong, what didn't you understand, how it could have been better, and how you could have been better.
+
 ## Appendix 
 
 Gafurov, A., Brejová, B., & Medvedev, P. (2022). Markov chains improve the significance computation of overlapping genome annotations. Bioinformatics, 38(Supplement_1), i203–i211. https://doi.org/10.1093/bioinformatics/btac255
