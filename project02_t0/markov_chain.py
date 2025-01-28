@@ -1,3 +1,4 @@
+# adding this to allow commenting for reviewers
 def build_markov_model(markov_model, new_text):
     '''
     Function to build or add to a 1st order Markov model given a string of text
@@ -22,7 +23,7 @@ def build_markov_model(markov_model, new_text):
             Increment markov_model[word][next_word]
 
     '''
-
+# adding this to allow commenting for reviewers
     def add_pair(first_pair, second_pair):
         if (first_pair in markov_model):
             markov_model[first_pair][second_pair] = 1
@@ -47,7 +48,7 @@ print (markov_model)
 
 import numpy as np
 
-
+# adding this to allow commenting for reviewers
 def get_next_word(current_word, markov_model, seed=42):
     '''
     Function to randomly move a valid next state given a markov model
@@ -77,7 +78,7 @@ def get_next_word(current_word, markov_model, seed=42):
     random_word = np.random.choice(word_list, p=prob)
     return random_word
 
-
+# adding this to allow commenting for reviewers
 def generate_random_text(markov_model, seed=42):
     '''
     Function to generate text given a markov model
@@ -92,9 +93,10 @@ def generate_random_text(markov_model, seed=42):
         Initialize sentence at start state
         Until End State:
             append get_next_word(current_word, markov_model)
-        Return sentence
+        Return sentence# adding this to allow commenting for reviewers
 
     '''
+    # adding this to allow commenting for reviewers
     scentence = []
     np.random.seed(seed)
 
@@ -111,7 +113,7 @@ def generate_random_text(markov_model, seed=42):
         words_to_connect = (get_next_word(init_start_state, markov_model, seed))
         if words_to_connect == '*E*':
             break
-
+# adding this to allow commenting for reviewers
         scentence.append(words_to_connect)
         init_start_state = (*init_start_state[1:], words_to_connect)
     return ' '.join(scentence)
@@ -140,7 +142,7 @@ for line in file:
         sonet = ""
     else:
         sonet = sonet + ' ' + line
-
+# adding this to allow commenting for reviewers
 print(generate_random_text(sonet_markov_model, seed=7))
 
 # tryign to making a pull request testing
