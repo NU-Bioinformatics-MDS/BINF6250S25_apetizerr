@@ -10,8 +10,9 @@ Packages: numpy, seqlogo
 Run the program via an IDE or python in the terminal. Recommended to use a bioconda environment opposed to assembling a local virtual environment.
 
 ### Required Data
-"GCF_000009045.1_ASM904v1_genomic.fna"
-"GCF_000009045.1_ASM904v1_genomic.gff"
+- "GCF_000009045.1_ASM904v1_genomic.fna"
+
+- "GCF_000009045.1_ASM904v1_genomic.gff"
 
 # Pseudocode
 
