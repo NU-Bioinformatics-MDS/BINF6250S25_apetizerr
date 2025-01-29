@@ -46,9 +46,41 @@ text = "one fish two fish red fish blue fish"
 markov_model = build_markov_model(markov_model, text)
 print (markov_model)
 
-import numpy as np
 
+import numpy as np
+def build_markov_model(markov_model, text, order=1):
+    '''
+    Function to build or add to a Nth order Markov model given a string of text
+
+    Args: 
+        markov_model (dict of dicts): a dictionary of word:(next_word:frequency pairs)
+            or None if a new model is being built
+        new_text (str): a string to build or add to the moarkov_model
+        order (int): the number of previous states to consider for the model
+        
+    Returns:
+        markov_model (dict of dicts): an updated/new markov_model
+    '''
+    def add_pair(first_pair,second_pair):
+        if(first_pair in markov_model):
+            markov_model[first_pair][second_pair] = 1
+        else:
+            markov_model[first_pair]={second_pair: 1}
+
+    this_text = text.split(" ")
+    current_tuple = ('*S*',)*order
+    for count in range(0,len(this_text)+1):
+        if(count == 0):
+            add_pair(current_tuple,this_text[count])
+        elif(count == len(this_text)):
+            current_tuple = current_tuple[1:]+(this_text[count-1],)
+            add_pair(current_tuple,'*E*')
+        else:
+            current_tuple = current_tuple[1:]+(this_text[count-1],)
+            add_pair(current_tuple,this_text[count])
+    return markov_model
 # adding this to allow commenting for reviewers
+
 def get_next_word(current_word, markov_model, seed=42):
     '''
     Function to randomly move a valid next state given a markov model
