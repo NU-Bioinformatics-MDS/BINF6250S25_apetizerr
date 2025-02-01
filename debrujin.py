@@ -51,12 +51,16 @@ class DeBruijnGraph():
         >>> print(dbg.graph) #doctest: +ELLIPSIS +NORMALIZE_WHITESPACE
         defaultdict(<class 'list'>, {'thi': ['his', 'his', 'his'], 'his': ['is ', 'is ', 'is '], ...)
         '''
+        nodes = k - 1
         word_assembly = input_string.split()
         edge_num = len(word_assembly) - k + 1
 
-        for i in self.graph:
-
-        pass
+        for i in range(len(nodes)):
+            # iterates through the character with the number of nodes left and right
+            assem_kmer = input_string[i:i + k]
+            left_assem = assem_kmer[:-1]
+            right_assem = assem_kmer[1:]
+        return left_assem, right_assem
 
 
 graph = DeBruijnGraph("fool me once shame on shame on you fool me", 6)
