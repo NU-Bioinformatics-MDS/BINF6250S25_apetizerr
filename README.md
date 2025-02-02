@@ -88,3 +88,26 @@ For each k-length substring of input:
 def graph(self):
     return self._graph
 ```
+
+## Appendix:
+The resulting script used to create the output for assigment one was informed by the results fo the following propts searches and reference documents.
+
+Website:
+    GeeksForGeeks - `https://www.geeksforgeeks.org/de-bruijn-sequence-set-1/?ref=header_outind`
+    GeeksForGeeks - `https://www.geeksforgeeks.org/eulerian-path-eulerian-circuit-in-python/?ref=ml_lbp`
+    Gemini Pro Prompt   - Does this summarize the key logic for a Debrijn graph?  populate the dict:
+                        Each time an input_string is presented:
+                            parse the input_string into kmers of len(k)
+                            build the (left) node as kmer[:-1] ket in defaultdict
+                            build the (right) node as kmer[1:] value in list in defaultdict
+                        loop through the keys
+
+                        -  how to bold in markdown language
+                        -  how to make an askterisk in markdown?
+                        -  Are these required ">>>" when using doctest?
+                        -  how to embed a block of code into an md file?
+
+    
+
+
+
