@@ -2,7 +2,7 @@
 
 ## Description of the project
 
-De Brujin Graph in bioinformatics is used to assemble paths of genetic information by the k-mer, constructing longer sequences from fragments of DNA. By following the overlapping k-mers of the genetic materials, researchers were able to assemble longer genetic data from the graphs made by De Brujin model. In this project the program will receive a string to then break it down to fragments of k to perform a Eularian Walk: continious connection of nodes and edges of the sequence. 
+De Brujin Graph in bioinformatics is used to assemble paths of genetic information by the k-mer, constructing longer sequences from fragments of DNA. By following the overlapping k-mers of the genetic materials, researchers were able to assemble longer genetic data from the graphs made by De Brujin model. In this project the program will receive a string to then break it down to fragments of k to perform a Eularian Walk: continious connection of nodes and edges of the sequence to output a string connecting the k-mers. 
 
 ## Pertinent documentation and usage write-up
 
