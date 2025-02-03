@@ -2,7 +2,7 @@
 
 ## Description of the project
 
-De Brujin Graph in bioinformatics is used to assemble paths of genetic information by the k-mer, constructing longer sequences from fragments of DNA. By following the overlapping k-mers of the genetic materials, researchers were able to assemble longer genetic data from the graphs made by De Brujin model. In this project the program will receive a string to then break it down to fragments of k to perform a Eularian Walk: continious connection of nodes and edges of the sequence to output a string connecting the k-mers. 
+De Brujin Graph in bioinformatics is used to assemble paths of genetic information by the k-mer, constructing longer sequences from fragments of DNA. By following the overlapping k-mers of the genetic materials, researchers were able to assemble longer genetic data from the graphs made by De Brujin model without knowledge of the order just the association of the sequence. In this project the program will receive a string to then break it down to fragments of k to make a De Brujin Graph and perform a Eulerian Walk: continious connection of nodes and edges of the sequence to output a string connecting the k-mers. 
 
 ## Pertinent documentation and usage write-up
 
@@ -99,7 +99,7 @@ def graph(self):
 
 Difficulty in developing the project was resolving a merge conflict, particularly because the trouble shooting methods did not work on the matter. Trying to solve the issue by collaborating using multiple terminal commands of checking for the merge conflict was not found, nor was the merge interfere with any of the files on the branch. We also tested by cloning the branch using mutiple reference points of commits and making new branches. In the interest of time, we closed this pull request and absolved this issue by downloading the files from our repo then uploaded it manually.
 
-Developing the program 
+We also had trouble conceptually developing the program for the Eulerian walk required probabilistic determination using random to select the right nodes. With help, we realized to traverse through the De Brujin graph when there are more than one option we need to randomly choose the path to go through.
 
 ## Appendix:
 The resulting script used to create the output for assigment one was informed by the results fo the following propts searches and reference documents.
