@@ -2,12 +2,14 @@
 
 ## Description of the project
 
-The program constructs a De Brujin 
+De Brujin Graph in bioinformatics is used to assemble paths of genetic information by the k-mer, constructing longer sequences from fragments of DNA. By following the overlapping k-mers of the genetic materials, researchers were able to assemble longer genetic data from the graphs made by De Brujin model. In this project the program will receive a string to then break it down to fragments of k to perform a Eularian Walk: continious connection of nodes and edges of the sequence. 
 
 ## Pertinent documentation and usage write-up
 
-Python ver. 3.11
-Package: 
+- Python ver. 3.11
+- Package: collections, random
+
+To run the program, run on the terminal or via a python IDE with the correct version and packages.
 
 ## Psuedocode
 Required routines
@@ -93,11 +95,16 @@ For each k-length substring of input:
 def graph(self):
     return self._graph
 ```
+## Reflection
+
+Difficulty in developing the project was resolving a merge conflict, particularly because the trouble shooting methods did not work on the matter. Trying to solve the issue by collaborating using multiple terminal commands of checking for the merge conflict was not found, nor was the merge interfere with any of the files on the branch. We also tested by cloning the branch using mutiple reference points of commits and making new branches. In the interest of time, we closed this pull request and absolved this issue by downloading the files from our repo then uploaded it manually.
+
+Developing the program 
 
 ## Appendix:
 The resulting script used to create the output for assigment one was informed by the results fo the following propts searches and reference documents.
 
-Website:
+Websites:
     GeeksForGeeks - `https://www.geeksforgeeks.org/de-bruijn-sequence-set-1/?ref=header_outind`
     GeeksForGeeks - `https://www.geeksforgeeks.org/eulerian-path-eulerian-circuit-in-python/?ref=ml_lbp`
     Gemini Pro Prompt   - Does this summarize the key logic for a Debrijn graph?  populate the dict:
@@ -113,7 +120,10 @@ Website:
                         -  how to embed a block of code into an md file?
 
 
+Linkurious Graph algorithms 101: introducing popular algorithms and how to apply them - `https://linkurious.com/graph-algorithms/`
 
+PNAS - Assembly of long error-prone reads using de Bruijn graphs - `https://www.pnas.org/doi/full/10.1073/pnas.1604560113`
+   
 
     
 
