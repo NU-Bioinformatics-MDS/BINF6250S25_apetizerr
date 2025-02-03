@@ -1,8 +1,13 @@
-A description of the project
-Pertinent documentation and usage write-up
-Pseudocode
-Reflection narrative that describes what went right, what went wrong, what didn't you understand, how it could have been better, and how you could have been better.
-Appendix (AI usage, citations, etc.)
+# DeBrujin Graph Project
+
+## Description of the project
+
+The program constructs a De Brujin 
+
+## Pertinent documentation and usage write-up
+
+Python ver. 3.11
+Package: 
 
 ## Psuedocode
 Required routines
@@ -106,6 +111,9 @@ Website:
                         -  how to make an askterisk in markdown?
                         -  Are these required ">>>" when using doctest?
                         -  how to embed a block of code into an md file?
+
+
+
 
     
 
