@@ -4,7 +4,6 @@ import numpy as np
 
 def cal_score(matrix, seq1, seq2, i, j, match, mismatch, gap):
     '''Calculate score for position (i,j) in scoring matrix, also record move to trace back
-
     Args:
         matrix (numpy array): scoring matrix
         seq1 (str): sequence 1
@@ -29,12 +28,15 @@ def cal_score(matrix, seq1, seq2, i, j, match, mismatch, gap):
     up_score = matrix[i - 1, j]
     left_score = matrix[i - 1, j - 1]
     if seq1[i] == seq2[j]:
-        diag_score = matrix[i - 1, j - 1] + match
-        up_score = matrix[i - 1, j] + gap
+        diag_score = diag_score + match
+        up_score = up_score + gap
+        left_score = left_score + gap
     else:
-        diag_score = matrix[i - 1, j] + mismatch
-        up_score = matrix[i - 1, j] + gap
+        diag_score = diag_score + mismatch
+        up_score = up_score + gap
+        left_score = left_score + gap
     score = max(diag_score, up_score, left_score)
+
     return score
 
 
@@ -65,7 +67,6 @@ def traceback(seq1, seq2, traceback_matrix, maximum_position):
                 ...
             elif current_move == LEFT:
                 ...
-
     '''
     pass
 
@@ -92,12 +93,11 @@ def smith_waterman(seq1, seq2, match=1, mismatch=-1, gap=-1):
     for i in range(S.shape[0]):
         for j in range(T.shape[1]):
             S[i][j] =
-            T[i][j] = direction of max(S[i - 1][j - 1] + compute_diag_score, S[i - 1][j] + gap_score, S[i][j - 1] + gap_score, 0)
-
+            T[i][j] =
 seq1 = 'TACTTAG'
 seq2 = 'CACATTAA'
 
-aligned_seq1, aligned_seq2, score_matrix = smith_waterman(seq1,seq2)
+aligned_seq1, aligned_seq2, score_matrix = smith_waterman(seq1, seq2)
 
 print (aligned_seq1)
 print (aligned_seq2)
