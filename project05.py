@@ -25,7 +25,18 @@ def cal_score(matrix, seq1, seq2, i, j, match, mismatch, gap):
         traceback = maximum direction or end
 
     '''
-    pass
+    diag_score = matrix[i - 1, j - 1]
+    up_score = matrix[i - 1, j]
+    left_score = matrix[i - 1, j - 1]
+    if seq1[i] == seq2[j]:
+        diag_score = matrix[i - 1, j - 1] + match
+        up_score = matrix[i - 1, j] + gap
+    else:
+        diag_score = matrix[i - 1, j] + mismatch
+        up_score = matrix[i - 1, j] + gap
+    score = max(diag_score, up_score, left_score)
+    return score
+
 
 
 def traceback(seq1, seq2, traceback_matrix, maximum_position):
