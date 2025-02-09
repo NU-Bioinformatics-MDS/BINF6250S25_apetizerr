@@ -91,7 +91,7 @@ def smith_waterman(seq1, seq2, match=1, mismatch=-1, gap=-1):
 
     for i in range(S.shape[0]):
         for j in range(T.shape[1]):
-            S[i][j] = max(S[i - 1][j - 1] + compute_diag_score, S[i - 1][j] + gap_score, H[i][j - 1] + gap_score, 0)
+            S[i][j] =
             T[i][j] = direction of max(S[i - 1][j - 1] + compute_diag_score, S[i - 1][j] + gap_score, S[i][j - 1] + gap_score, 0)
 
 seq1 = 'TACTTAG'
