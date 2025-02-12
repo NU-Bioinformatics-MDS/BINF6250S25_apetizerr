@@ -51,6 +51,7 @@ class DeBruijnGraph:
             suffix = input_string[char_pos - k + 1 : char_pos]
             self.add_edge(prefix, suffix)
             char_pos += 1
+        # I like the way k was used here in the while loop. So it goes from the k length to the end of the string. Very nice.
 
     def find_eulerian_path(self):
         """This function searches for a Eulerian path in the debruijn graph by recursively calling a depth first search function."""
@@ -63,6 +64,10 @@ class DeBruijnGraph:
                 self.remove_edge(node, neighbor)                            # Removes the right node from the graph eliminating an edge
                 dfs(neighbor, path)                                         # Recursively Calls the dfs function with the neighbor node
             path.append(node) 
+        # I like this nested DFS search routine - I believe it wanted find_eulerian_path to be recursive,
+        # But this kind of fits the way I think about it a little better.
+        # However - since you are reversing the path before returning it - it will be reversed from what was expected in the initial comments.
+        # Because it is stated in the original comments I would suggest returning the reversed path to match.
         path = []
         dfs(self.first_node, path)  # Start from self.first_node
         return path[::-1]  # Reverse the path since the path is found in reverse order
