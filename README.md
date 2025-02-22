@@ -5,11 +5,12 @@ Phylogenic studies undergo evolutionary insights into how organisms evolved over
 
 ## Pertinent documentation and usage write-up
 Run the program using Python ver 3.13
+Data: Organisms with amino acid sequence is used to assemble the tree as the input.
 Packages: 
   1. Ensure the typing package has List, Tuple, and Dict.
   2. Ensure the package numpy is installed.
   3. Ensure the package ete3 is installed.
-Data: Organisms with amino acid sequence is used to assemble the tree as the input.
+
 ## Pseudocode
 Iterate through the sequence file using header and sequence as the dictionary for initializing the genetic data and bind them together into a dictionary. Although the assignment is a familiar in regards to Smith Waterman algorithim implemented previously consider the differences and implication this can have virus amino acid versus nucleotides. Furthermore consider the intent is to find the diverging differences between the genetic to establish branches and leaves rather than pair-wise alignment.
 
