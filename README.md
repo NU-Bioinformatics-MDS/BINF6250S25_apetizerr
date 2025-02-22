@@ -3,7 +3,7 @@
 ## Description
 Phylogenic studies undergo evolutionary insights into how organisms evolved over-time. Pretaining to both phenotypes and genotypes, this mapping is used to visualize the distance between many field of studies including drug resistance, evolutionary changes, and population level changes. In this project we constructed an algorithm that pretains to calculate the relations of genetic overlap between SARS-Cov viruses. This project accomplishes this with a combination of both Smith-waterman algorithm and a neighborhood growing tree. Especially in regards to the phylogenic tree, the Smith-Waterman is used to determine the distance between the genetics of Sars-Cov virsuses then calculates the Q matrix joining the neighboring virsus that share an amino acid similarity. The program then visualizes the tree using the Newick format to construct a visual representation and distance between the viruses.
 
-## Pertinent documentation and usage write-up
+## Documentation
 - Run the program using Python ver 3.13
 - Data: Organisms with amino acid sequence is used to assemble the tree as the input.
 Packages: 
