@@ -12,7 +12,7 @@ Packages:
   3. Ensure the package ete3 is installed.
 
 ## Pseudocode
-Iterate through the sequence file using header and sequence as the dictionary for initializing the genetic data and bind them together into a dictionary. Although the assignment is a familiar in regards to Smith Waterman algorithim implemented previously consider the differences and implication this can have virus amino acid versus nucleotides. Furthermore consider the intent is to find the diverging differences between the genetic to establish branches and leaves rather than pair-wise alignment.
+Iterate through the sequence file using header and sequence as the dictionary for initializing the genetic data and bind them together into a dictionary. Although the assignment is a familiar in regards to Smith Waterman algorithim implemented previously consider the differences and implication this can have virus amino acid versus nucleotides. Does the algorithm require adjustment or change? Furthermore consider the intent is to find the diverging differences between the genetic to establish branches and leaves rather than pair-wise alignment.
 
 ## Reflection 
 
