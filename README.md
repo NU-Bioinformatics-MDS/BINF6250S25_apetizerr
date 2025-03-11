@@ -13,8 +13,6 @@ BWT algorithm first starts with a string assembly that is rotated using the $ as
 ## Reflection 
 narrative that describes what went right, what went wrong, what didn't you understand, how it could have been better, and how you could have been better.
 ## Appendix
-Burrows, M., & Wheeler, D. J. (1994). A block-sorting lossless data compression algorithm (SRC Research Report No. 124). Systems Research Center.
+- Burrows, M., & Wheeler, D. J. (1994). A block-sorting lossless data compression algorithm (SRC Research Report No. 124). Systems Research Center.
 
-- Kingsford, C. (n.d.). Burrows-Wheeler Transform. Carnegie Mellon University. Retrieved from https://www.cs.cmu.edu/~ckingsf/bioinfo-lectures/bwt.pdf
-
-- 
+- Kingsford, C. (n.d.). Burrows-Wheeler Transform. Carnegie Mellon University. Retrieved from https://www.cs.cmu.edu/~ckingsf/bioinfo-lectures/bwt.pd
