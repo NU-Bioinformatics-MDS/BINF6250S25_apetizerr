@@ -1,5 +1,6 @@
 
 from collections import Counter
+import numpy as np
 
 def bwt(text: str) -> str:
     """Function to calculate Burrows-Wheeler Transform for a given string.
@@ -137,26 +138,36 @@ def cal_count(string: str) -> dict[str, int]:
 
 def cal_occur(bwt_string: str) -> dict[str, list[int]]:
     """Function to calculate occurrences of each character up to each position.
-
+    
     For each character and each position i, calculates how many times the
     character appears in the substring bwt_string[0:i].
-
+    
     Args:
         bwt_string: The BWT string to analyze.
-
+    
     Returns:
         A dictionary mapping each character to a list of occurrence counts,
         where occur[char][i] is the number of occurrences of char in
         bwt_string[0:i].
-
+    
     Examples:
-         cal_occur('AG$CG')
+        >>> cal_occur('AG$CG')
         {'$': [0, 0, 1, 1, 1], 'A': [1, 1, 1, 1, 1], 'C': [0, 0, 0, 1, 1], 'G': [0, 1, 1, 1, 2]}
-
-         cal_occur('annb$aa')
+        
+        >>> cal_occur('annb$aa')
         {'$': [0, 0, 0, 0, 1, 1, 1], 'a': [0, 1, 1, 1, 1, 2, 3], 'b': [0, 0, 0, 1, 1, 1, 1], 'n': [0, 0, 2, 2, 2, 2, 2]}
     """
-    pass
+    
+    character_dict = {}
+    
+    for char in bwt_string:
+        character_dict[char] = np.zeros(len(bwt_string))
+    for pos in range(len(bwt_string)):
+        curr = bwt_string[pos:pos + 1]
+        for pos2 in bwt_string:
+            character_dict[pos2][pos] = character_dict[pos2][pos - 1]
+        character_dict[curr][pos] = character_dict[curr][pos] + 1
+    return character_dict
 
 
 def update_range(
