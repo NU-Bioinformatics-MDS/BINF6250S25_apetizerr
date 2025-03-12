@@ -14,7 +14,7 @@ BWT algorithm first starts with a string assembly that is rotated using the $ as
 There was difficulty interpreting the output for `cal_occur` function as the example output was `cal_occur('annb$aa')
         {'$': [0, 0, 0, 0, 1, 1, 1], 'a': [0, 1, 1, 1, 1, 2, 3], 'b': [0, 0, 0, 1, 1, 1, 1], 'n': [0, 0, 2, 2, 2, 2, 2]}` when the actual output should be `cal_occur('annb$aa')
         {'$': [0, 0, 0, 0, 1, 1, 1], 'a': [1, 1, 1, 1, 1, 2, 3], 'b': [0, 0, 0, 1, 1, 1, 1], 'n': [0, 1, 2, 2, 2, 2, 2]}
-`. After discussing we realized there is an error in the pseudocode and based it off the first example given. We also had trouble assembling everything together as even after we used the function it didn't match the output. 
+`. After discussing we realized there is an error in the pseudocode and based it off the first example given. We also had trouble assembling everything together as even after we used all the function with a logic we agreed with the output didn't match the exmaple. 
     
 ## Appendix
 - Burrows, M., & Wheeler, D. J. (1994). A block-sorting lossless data compression algorithm (SRC Research Report No. 124). Systems Research Center.
