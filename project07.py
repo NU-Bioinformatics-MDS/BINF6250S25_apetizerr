@@ -196,8 +196,16 @@ def update_range(
     Note:
         This function assumes occur[a][-1] = 0 for boundary conditions.
     """
-    pass
+        # if the character a is not in the count or occur dictionaries, return an empty range
+    if a not in count or a not in occur:
+        return upper, lower
 
+    # calculate the new lower and upper bounds based on the character a
+    new_lower = count[a] + occur[a][lower]
+    new_upper = count[a] + occur[a][min(upper, len(occur[a]) - 1)]
+
+    # return the updated range
+    return new_lower, new_upper
 
 def find_match(query: str, reference: str) -> list[int]:
     """Function to find exact matching by applying Burrows-Wheeler Transform.
@@ -221,4 +229,34 @@ def find_match(query: str, reference: str) -> list[int]:
         >>> find_match('xyz', 'banana')
         []
     """
-    pass
+    # calculate the suffix array of the reference string
+    suffix_pos = suffix_array(reference)
+
+    # calculate the BWT of the reference string
+    bwt_string = BWT_from_suffix_array(reference, suffix_pos)
+
+    # calculate the count array for the BWT string
+    counts = cal_count(bwt_string)
+
+    # calculate the occurrence array for the BWT string
+    occurs = cal_occur(bwt_string)
+
+    # initialize search range to cover the entire transformed text
+    lower, upper = 0, len(bwt_string)
+
+    # for each character in the pattern, processing from right to left
+    for char in reversed(query):
+        # update the search range based on the current character
+        lower, upper = update_range(lower, upper, counts, occurs, char)
+
+        # if the range becomes empty
+        if lower >= upper:
+            # return empty list as pattern is not found
+            return []
+
+    # collect all suffix positions within the final range
+    match_pos = suffix_pos[lower:upper]
+
+    # return the list of matching positions
+    return match_pos
+ 
