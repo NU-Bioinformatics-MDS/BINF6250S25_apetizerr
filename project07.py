@@ -21,9 +21,12 @@ def bwt(text: str) -> str:
         BWT('banana$')
         'annb$aa'
     """
+    # good call, we did this too.
     text_list = []
     if text[-1] != "$":
         text += "$"
+
+    # This looks a lot like ours, straight forward.
     # this rotates the string and puts it into a list
     for i in range(len(text)):
         text_list.append(text[i::1]+text[:i])
@@ -96,6 +99,7 @@ def BWT_from_suffix_array(
         'lo$oogg'
     """
     bwt_text = ""
+    # This looks clean, efficient.
     for i in suffix_positions:
         bwt_text += text[i-1]
     return bwt_text
