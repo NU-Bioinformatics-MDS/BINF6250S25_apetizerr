@@ -1,3 +1,8 @@
+# Project 10: Baum-Welch Algorithm for Hidden Markov Model
+## Description
+
+The Baum-Welch Algorithm is an expectation maximization approach for HMM parameters. Using the forward and backward algorithm, the predicted statistic from each observation is used to find the parameters of HMM. By doing so this application of unsupervised learning is used to train a models for examples like CpG island detection and gene prediction. The model takes observations of a sequence, initial probabilities, transition probabilities and emission probabilities for 
+
 ## Pseudocode
 ```
 Algorithm BaumWelch(obs, init_probs, trans_probs, emit_probs, maxIter, epsilon)
@@ -113,4 +118,9 @@ Algorithm BaumWelch(obs, init_probs, trans_probs, emit_probs, maxIter, epsilon)
     Return init_probs, trans_probs, emit_probs
 ```
  
+## Reflection
 
+## Appendix
+- Mills, R. (n.d.). Baum-Welch EM Algorithm. University of Michigan.
+- Compeau, P., & Pevzner, P. (2014). Bioinformatics algorithms: An active learning approach. San Diego, CA: Active Learning Publishers.
+- Rabiner, L. R. (1989). A tutorial on hidden Markov models and selected applications in speech recognition. Proceedings of the IEEE, 77(2), 257–286. https://doi.org/10.1109/5.18626
