@@ -5,7 +5,7 @@ The Baum-Welch Algorithm is an expectation maximization approach for HMM paramet
 ## Documentation and Usage
 - Python ver: 1.13
 - Packages: math
-Run program in the terminal or open and use in an IDE. 
+- Run program in the terminal or open and use in an IDE. 
 Have the inputs as a dictionary of dictionary as the data structure.
 Edit the global variables within the code `maxIter = 100` for the number of iteration and `epsilon = 1e-4` as the convergence threshold.
 ## Pseudocode
